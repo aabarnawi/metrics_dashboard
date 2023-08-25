@@ -35,7 +35,7 @@
 6-Percentage of success resopone of the /health endpoint (we can set this to 95%+ per month for 95% uptime per month)<br/>
 
 ## Creating SLI metrics.
-~~*TODO:* It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs.~~ 
+~~*TODO:* It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs.~~ <br/>
 
 1- Total time of network requests is importnant to figure out the latency in requests and the response time per request.<br/>
 2- HTTP Traffic allows us to measure the traffic, which if became higher than what the server an handle, will affect the response time.<br/>
@@ -44,14 +44,14 @@
 5- Health endpoint response is a very good indicator to weather a service is healthy or not, and should be used as an indicater for the service.<br/>
 
 ## Create a Dashboard to measure our SLIs
-~~*TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.~~
+~~*TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.~~<br/>
 
 ![Image of 200,400,500 graphs](answer-img/2x_4x_5x_24h.png)
 
 
 
 ## Tracing our Flask App
-~~*TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.~~
+~~*TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.~~<br/>
 
 
 ### Sucessfull Trace
@@ -63,12 +63,12 @@
 ![Error  Trace Code ](answer-img/jaegar_span_error_code.png)
 
 ## Jaeger in Dashboards
-~~*TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.~~
+~~*TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.~~<br/>
 ![Trace #1 ](answer-img/grafana_trace1.png)
 
 
 ## Report Error
-~~*TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.~~
+~~*TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.~~<br/>
 TROUBLE TICKET
 
 Name: Internal server error
@@ -86,7 +86,7 @@ Description: Backend is throwing an timout error at the endpoint /star1, the tra
 
 
 ## Creating SLIs and SLOs
-~~*TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.~~
+~~*TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.~~<br/>
 CPU Usage: Given the average used rate, we can predict and prevent errors by measuing abnormal values of the CPU <br/>
 Memory Usage:  Given the average used rate, we can also predict and prevent errors by measuing abnormal values of the Meomry <br/>
 Failed HTTP Requests : The number of failed requests in a given timeframe is a good indication of abnormality in the application <br/>
@@ -95,13 +95,13 @@ Error budget: The amount of downtime that is acceptable for an application. A 99
 
 
 ## Building KPIs for our plan
-~~*TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.~~
+~~*TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.~~<br/>
 1-Memory and CPU usage should be whithin a range of 10% of the average usage per month. Lower than average indicates that the service might be down, while higher than average can let us know that there is high load, so intervention is needed to prevent downtim due to high load.<br/>
-2- Failed HTTP requests should  not exceed < delta > requests per hour. The delta will be chosen after the application is monitored in its best state. 
+2- Failed HTTP requests should  not exceed < delta > requests per hour. The delta will be chosen after the application is monitored in its best state. <br/>
 
 
 ## Final Dashboard
-~~*TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.~~
+~~*TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.~~<br/>
 Uptime graph: measrues the uptime of the backend service<br/>
 Traces With Duration: Lists the traces and their durations, where the high durations are shown in red, this is good for showing the latency and pointing out timed out requests.<br/>
 The other 3 graphs show the 2xx,4xx and 5xx status codes. which is an important indicator for the services correctness<br/>
