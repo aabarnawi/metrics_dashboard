@@ -52,7 +52,8 @@
 
 ## Tracing our Flask App
 ~~*TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.~~<br/>
-
+### Trace History
+![Trace History Image ](answer-img/trace_history.png)
 
 ### Sucessfull Trace
 ![Sucessfull Trace Image ](answer-img/jaegar_span_normal.png)
