@@ -8,6 +8,7 @@ import logging
 from jaeger_client import Config
 from flask_opentracing import FlaskTracing
 
+
 import redis
 import redis_opentracing
 
